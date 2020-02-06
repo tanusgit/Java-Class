@@ -1,11 +1,16 @@
 package atm;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ATM {
 	public static void main(String[] args) {
 		ATM m = new ATM();
+		ArrayList<Transaction> array = new ArrayList();
+		Transaction t = new Transaction("deposit", 5);
+		array.add(t);
 	}
+
 
 	Scanner sc = new Scanner(System.in);
 	int balance = 100;
