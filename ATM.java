@@ -1,22 +1,26 @@
 package atm;
-
+/*
+ * when we use an ArrayList of user made type we have to create an arraylist of
+ * that type first. Then we need to create an object of that user made class.
+ *  Then we can call the add() on the arraylist object to add the user made type 
+ * to the arraylist.
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ATM {
 	public static void main(String[] args) {
 		ATM m = new ATM();
-		ArrayList<Transaction> array = new ArrayList();
-		Transaction t = new Transaction("deposit", 5);
-		array.add(t);
-	}
 
+	}
 
 	Scanner sc = new Scanner(System.in);
 	int balance = 100;
 	int deposit = 0;
 	int withdraw = 0;
 	int difference = balance - withdraw;
+	//array has both deposit and withdrawal records 
+	ArrayList<Transaction> array = new ArrayList();
 
 	public ATM() {
 		menu();
@@ -51,15 +55,17 @@ public class ATM {
 		withdraw = sc.nextInt();
 		if (withdraw > balance) {
 			System.out.println("You cannot withdraw more than that " + "you have in your account");
-		}
-		else if (withdraw > 40000) {
+		} else if (withdraw > 40000) {
 			System.out.println("You cannot withdraw more than 40000");
 		}
-		
+
 		else {
 			balance = balance - withdraw;
 			System.out.println("You have " + balance + " left in your account.");
+			Transaction t = new Transaction("withdrawn value: ", withdraw);
+			array.add(t);
 		}
+		
 
 	}
 
@@ -78,15 +84,22 @@ public class ATM {
 		}
 		if (balance > 50000) {
 			System.out.println("You cannot deposit more than 50000");
-		} else
+		} else {
 			balance = balance + deposit;
 		System.out.println("You have " + balance + "  in your account.");
+		//creating Transaction type to hold balance 
+		Transaction t = new Transaction("deposit value: ", deposit);
+		array.add(t);
+		}
 	}
 
 	// will show the history of the all transaction
 	private void history() {
-		// TODO Auto-generated method stub
-
+		// made a Transaction class to hold the transaction values
+		// made a ArrayList of Transaction type to hold the values of Transaction type
+		// Transaction type has 2 values- int and string types
+		
+		System.out.println(array + "\n");
 	}
 
 	// will show the current balance
