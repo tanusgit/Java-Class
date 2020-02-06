@@ -10,8 +10,8 @@ public class ATM {
 	Scanner sc = new Scanner(System.in);
 	int balance = 100;
 	int deposit = 0;
-	int totalDeposit = 0;
 	int withdraw = 0;
+	int difference = balance - withdraw;
 
 	public ATM() {
 		menu();
@@ -46,9 +46,12 @@ public class ATM {
 		withdraw = sc.nextInt();
 		if (withdraw > balance) {
 			System.out.println("You cannot withdraw more than that " + "you have in your account");
-		} else if (withdraw > 40000) {
+		}
+		else if (withdraw > 40000) {
 			System.out.println("You cannot withdraw more than 40000");
-		} else {
+		}
+		
+		else {
 			balance = balance - withdraw;
 			System.out.println("You have " + balance + " left in your account.");
 		}
@@ -57,25 +60,23 @@ public class ATM {
 
 	// cannot deposit more than 50000
 	private void deposit() {
-			System.out.println("How much do you wish to deposit?");
-			deposit = sc.nextInt();
+		System.out.println("How much do you wish to deposit?");
+		deposit = sc.nextInt();
 
-			if (deposit < 0) {
-				System.out.println("You cannot deposit negative value");
-				return;
-			}
-			if (deposit >= 50000) {
-				System.out.println("You cannot deposit more than 50000");
-				return;
-			}
-			if(balance > 50000) {
-					System.out.println("You cannot deposit more than 50000");
-				}
-			else
-				balance = balance + deposit;
-				System.out.println("You have " + balance + "  in your account.");
-			}
-		
+		if (deposit < 0) {
+			System.out.println("You cannot deposit negative value");
+			return;
+		}
+		if (deposit >= 50000) {
+			System.out.println("You cannot deposit more than 50000");
+			return;
+		}
+		if (balance > 50000) {
+			System.out.println("You cannot deposit more than 50000");
+		} else
+			balance = balance + deposit;
+		System.out.println("You have " + balance + "  in your account.");
+	}
 
 	// will show the history of the all transaction
 	private void history() {
