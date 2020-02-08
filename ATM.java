@@ -11,28 +11,20 @@ import java.util.Scanner;
 public class ATM {
 	public static void main(String[] args) {
 		ATM m = new ATM();
-
+		m.processOperations();
 	}
 
 	Scanner sc = new Scanner(System.in);
-	int balance = 100;
-	int deposit = 0;
-	int withdraw = 0;
-	int difference = balance - withdraw;
+	int balance = 10000;
+	
+
+	//int difference = balance - withdraw;
 	//array has both deposit and withdrawal records 
 	ArrayList<Transaction> array = new ArrayList();
-
-	public ATM() {
-		menu();
-	}
-
-	public void menu() {
+	
+	public void processOperations() {
 		while (true) {
-			System.out.println("w: withdraw");
-			System.out.println("d: deposit");
-			System.out.println("h: show transaction history");
-			System.out.println("c: current balance");
-			System.out.println("e: exit");
+			menu();
 			String input = sc.next();
 			if (input.equalsIgnoreCase("e")) {
 				break;
@@ -49,8 +41,17 @@ public class ATM {
 		}
 	}
 
+	public void menu() {
+		System.out.println("w: withdraw");
+		System.out.println("d: deposit");
+		System.out.println("h: show transaction history");
+		System.out.println("c: current balance");
+		System.out.println("e: exit");
+	}
+
 	// cannot withdraw more than 40000
 	private void withdraw() {
+		int withdraw = 0;
 		System.out.println("How much do you wish to withdraw?");
 		withdraw = sc.nextInt();
 		if (withdraw > balance) {
@@ -71,6 +72,7 @@ public class ATM {
 
 	// cannot deposit more than 50000
 	private void deposit() {
+		int deposit = 0;
 		System.out.println("How much do you wish to deposit?");
 		deposit = sc.nextInt();
 
@@ -82,9 +84,7 @@ public class ATM {
 			System.out.println("You cannot deposit more than 50000");
 			return;
 		}
-		if (balance > 50000) {
-			System.out.println("You cannot deposit more than 50000");
-		} else {
+		else {
 			balance = balance + deposit;
 		System.out.println("You have " + balance + "  in your account.");
 		//creating Transaction type to hold balance 
