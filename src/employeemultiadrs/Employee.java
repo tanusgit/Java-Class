@@ -80,6 +80,11 @@ public class Employee {
 		this.presentadrs = presentadrs;
 		return presentadrs;
 	}
+	
+	public String toString() {
+		String res = name + " " + lname + " " + id + " " + salary ;
+		return res;
+	}
 
 	
 	
