@@ -8,9 +8,20 @@ public class Employee {
 	String name;
 	int salary;
 	String lname;
-	Address presentadrs;
+	ArrayList<Address> addresses;
 	
 	
+	public ArrayList<Address> getAddresses(){
+		if(addresses == null) {
+			addresses = new ArrayList<>();
+		}
+		return addresses;
+	}
+
+	public void setAddresses(ArrayList<Address> addresses) {
+		this.addresses = addresses;
+	}
+
 	public Employee() {
 		
 	}
@@ -72,14 +83,7 @@ public class Employee {
 		this.lname = lname;
 	}
 
-	public Address getPresentadrs() {
-		return presentadrs;
-	}
-
-	public Address setPresentadrs(Address presentadrs) {
-		this.presentadrs = presentadrs;
-		return presentadrs;
-	}
+	
 	
 	public String toString() {
 		String res = name + " " + lname + " " + id + " " + salary ;

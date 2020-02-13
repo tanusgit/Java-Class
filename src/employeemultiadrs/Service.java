@@ -1,5 +1,6 @@
 package employeemultiadrs;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Service {
@@ -18,22 +19,33 @@ public class Service {
 		return m;
 	}
 
-	public static Pair howManyEmployee() {
-		Pair p = new Pair();
-		Employee m = new Employee();
-		Address a = new Address();
+	public static void howManyEmployee() {
 		System.out.print("How many employees: ");
 		int input = sc.nextInt();
-		System.out.print("How many addresses ");
-		int input2 = sc.nextInt();
+		ArrayList<Employee> emps = new ArrayList<>();
 		for (int i = 0; i < input; i++) {
-			m = getEmployeeWithData();
+			Employee m = getEmployeeWithData();
+			System.out.print("How many addresses ");
+			int input2 = sc.nextInt();
 			for (int j = 0; j < input2; j++) {
-				a = m.setPresentadrs(getaddressWithData());
+				m.getAddresses().add(getaddressWithData());
+
 			}
-			p = new Pair(m, a);
+			emps.add(m);
+
 		}
-		return p;
+		int count = 1;
+		for (Employee e : emps) {
+			System.out.println("**************showing employee" + count++ + "****************");
+
+			e.display();
+			int count2 = 1;
+
+			for (Address a : e.getAddresses()) {
+				System.out.println("############showing address" + count2++ + "#########");
+				a.showAddress();
+			}
+		}
 
 	}
 
