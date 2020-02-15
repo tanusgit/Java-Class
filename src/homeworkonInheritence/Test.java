@@ -8,6 +8,7 @@ public class Test {
 		Manager m = new Manager(" Mina", 40, 2, "Pan: ll", "pf: ff", "level", "kk");
 		m.displayPerson();
 		m.promotion();
+		m.displayEmp();
 
 		System.out.println("########################################");
 		Employee e = new Employee("Employee name: Nil", 53, 3, "kl", "io");
@@ -19,6 +20,7 @@ public class Test {
 		n.displayEmp();
 		n.displayPerson();
 		n.promotion();
+		n.work();
 
 	}
 
