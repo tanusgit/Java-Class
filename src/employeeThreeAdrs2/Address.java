@@ -16,11 +16,6 @@ public class Address {
 	//private String streetNo = " ";
 	
 	
-	
-	
-	
-	
-	
 	/*public void setData() {
 		String array[] = new String[5];
 		System.out.println("enter address: ");
