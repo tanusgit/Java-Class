@@ -17,7 +17,7 @@ public class Person {
 	int id = 0;
 	String name = "";
 	int age = 0;
-	int min = 10;
+	
 	Scanner sc = new Scanner(System.in);
 	
 	public Person() {
@@ -45,6 +45,7 @@ public class Person {
 		return name;
 	}
 	public void setName() {
+		int min = 10;
 		System.out.println("enter name: ");
 		String name = sc.next();
 		if (name.length() >= min) {

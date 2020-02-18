@@ -6,6 +6,8 @@ public class Employee extends Person {
 	/*
 	 * this class has 5 instance variables as it extends Person class
 	 */
+	
+	//take input first then do validation in the other function
 	String pf = " ";
 	String pan = "";
 
@@ -52,7 +54,20 @@ public class Employee extends Person {
 		System.out.println("enter pan: ");
 		String pan = sc.next();
 		if (pan.length() == 13) {
-			this.pan = pan;
+			int count = 0;
+			for(int i =0; i < 13; i++) {
+				char c = pan.charAt(i);
+				if(Character.isDigit(c)) {
+					count++;
+				}
+			}
+			if(count >= 2) {
+				this.pan = pan;
+			}
+			else {
+				System.out.println("Wrong input");
+				}
+			
 		}
 		else {
 		System.out.println("Wrong input");

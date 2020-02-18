@@ -7,4 +7,8 @@ public class Hdfc extends RBIBank {
 		System.out.println("Hdfc:: rate of intrest 12%");
 	}
 	
+	public void interest() {
+		System.out.println("Hdfc:: rate of intrest 24%");
+	}
+	
  }

@@ -6,7 +6,7 @@ public class Test {
 	public static void main(String[] args) {
 		Test.input();
 	}
-	
+	//without runtime polymorphism
 	public static void input() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter bank name:  ");
