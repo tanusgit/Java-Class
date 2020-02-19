@@ -14,11 +14,34 @@ public class Staff extends Employee{
 	
 	
 	public Staff() {
-		super();
-		setContractId();
-		setContractPeriod();
 		
 	}
+	
+	public void takeinput() {
+		System.out.println("enter contract Id: ");
+		String c = sc.next();
+		System.out.println("enter contract Period: ");
+		int contractPeriod = sc.nextInt();
+		
+	}
+	
+	public void validate(String contactId, int contractperiod) {
+		if (contactId.startsWith("C_") || contactId.startsWith("P_")) {
+			this.contractId = contactId;
+		}
+		else {
+		System.out.println("Wrong input");
+		}
+		if ( contractperiod > 5 && contractperiod < 25) {
+			this.contractPeriod = contractperiod;
+		}
+		else {
+		System.out.println("Wrong input");
+		}
+		
+	}
+	
+	
 	public String getContractId() {
 		return contractId;
 	}
