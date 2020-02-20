@@ -3,7 +3,7 @@ package exceptionhandling;
 import java.util.Scanner;
 
 public class Test4 {
-	public static void main3(String[] args) {
+	public static void main(String[] args) {
 		/*Scanner sc = new Scanner(System.in);
 		String name = "";
 		int num1 = 20;

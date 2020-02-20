@@ -107,6 +107,58 @@ catch(){
 			System.out.println("Program ends");
 		}
 
+
+
+//when we write multiple catch block we have to keep global exception handling 
+ * at the end
+ * we cannot keep the global exception in the top because we will have compilation 
+ * error
+	can we create the exception?
+	yes
+	syntax:
+	ArithmeticException ex = new ArithmeticException("num2 cannot be 0");
+	throw ex; this throwing the exception logic should be inside the if statement
+			
+			 
+	if (num2 == 0) {
+			ArithmeticException ex = new ArithmeticException("num2 cannot be 0");
+			throw ex;
+		}		 
+			 
+		if we want to throw an exception object
+		1.create an exception object
+		2.throw the object
+			 
+		Exception is the parent class of all the exception class
+		
+		when we create exception or java creates exception, it does not matter
+		we need to do the exception handling
+		
+		
+->
+If the parent class is Exception , then we term the class as Exception class.
+
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+	 *
+	 *
+	 *
 	 */
 
+	
+	
 }
