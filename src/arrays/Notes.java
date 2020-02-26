@@ -50,6 +50,8 @@ public class Notes {
 	cannot increase the size or decrease the size
 	insert in between or delete in between is costly
 	search by content is costly
+	
+	we can use Arrays.sort() to sort the array
  * 
  */
 }

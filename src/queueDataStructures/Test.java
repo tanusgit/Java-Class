@@ -14,6 +14,12 @@ public static void main(String[] args) {
 	System.out.println("top element: " + q.peek());
 	//user1
 	System.out.println("removed element: " + q.poll());
+	System.out.println("top element: " + q.peek());
+	
+	
+	System.out.println("top element: " + q.peek());
+	System.out.println("removed element: " + q.poll());
+	System.out.println("top element: " + q.peek());
 	
 	System.out.println(q);
 	
