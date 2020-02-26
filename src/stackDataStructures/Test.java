@@ -6,13 +6,14 @@ public class Test {
 	public static void main(String[] args) {
 		Stack<String> s = new Stack<String>();
 		s.push("user1");
-		topElement(s);
+		//topElement(s);
 		s.push("user2");
-		topElement(s);
+		//topElement(s);
 		s.push("user3");
-		topElement(s);
+		//topElement(s);
 		s.push("user4");
 		topElement(s);
+		
 		String removeElement = s.pop();
 		System.out.println("element removed is: " + removeElement);
 
