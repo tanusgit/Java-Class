@@ -1,4 +1,4 @@
-package genericClass2;
+package genericClass2Homework;
 
 public class Person {
 	int id;
@@ -11,4 +11,10 @@ public class Person {
 		this.id = id;
 	}
 
+	@Override
+	public String toString() {
+		return "Person [id=" + id + "]";
+	}
+
+	
 }

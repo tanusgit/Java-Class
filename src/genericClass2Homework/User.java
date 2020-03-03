@@ -1,4 +1,4 @@
-package genericClass2;
+package genericClass2Homework;
 
 public class User {
 	int id;
