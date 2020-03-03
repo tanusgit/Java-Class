@@ -49,7 +49,8 @@ public class Notes {
 		print2(1)
      	print2(1232.131313f)
      	print2("Hello")
-	 
+	 why should we write the <>?
+	 ans: If we write the <E> java will know that E is not a class, it is a template
 	 
 	 
 	 */
