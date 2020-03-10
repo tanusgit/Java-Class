@@ -3,7 +3,7 @@ package annotationformethod;
 import java.lang.annotation.*;
 import java.lang.reflect.Method;
 
-@Retention(min = RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.RUNTIME)
 @interface MethodInfo {
 	String author() default "ram";
 

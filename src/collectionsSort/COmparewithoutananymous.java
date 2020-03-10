@@ -1,6 +1,9 @@
 package collectionsSort;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class COmparewithoutananymous implements Comparator<Employee>{
 	
@@ -10,8 +13,7 @@ public class COmparewithoutananymous implements Comparator<Employee>{
 			return (e1.getName() .compareTo(e2.getName()));
 		}
 	}
-
-	public class EmpAgeComparator implements Comparator<Employee> {
+class EmpAgeComparator implements Comparator<Employee> {
 
 		@Override
 		public int compare(Employee e1, Employee e2) {
@@ -31,7 +33,7 @@ class EmpListSort3 {
 
 			
 			System.out.println("\n\nsorting based on name:------");
-		 Collections.sort(empList,new EmpNameComparator());
+		// Collections.sort(empList,new EmpNameComparator());
 			show(empList);
 			 
 
@@ -51,4 +53,4 @@ class EmpListSort3 {
 	}
 
 
-}
+

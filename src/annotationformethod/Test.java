@@ -2,7 +2,7 @@ package annotationformethod;
 import java.util.Date;
 
 public class Test {
-	@SuppressWarnings(min = "deprecation")
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// Creating date
 		Date d1 = new Date(2017, 1, 21);
