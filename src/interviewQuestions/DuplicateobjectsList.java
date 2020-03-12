@@ -20,7 +20,7 @@ public class DuplicateobjectsList {
 		list.add("Anil");
 		list.add("Tanu");
 		// output Tanu Anil Krishna Manila
-System.out.println(list.size());
+//		System.out.println(list.size());
 		List<String> m = removeDuplicate(list);
 		for (String n : m) {
 			System.out.println(n);
@@ -34,33 +34,30 @@ System.out.println(list.size());
 		l1.add(400);
 		l1.add(400);
 		l1.add(10);
-	//	System.out.println(l1);
+		// System.out.println(l1);
 		// hashset has no duplicates so using hashset
 		HashSet hs = new HashSet(l1);
 		// System.out.println(hs);
 		ArrayList l2 = new ArrayList(hs);
-		//System.out.println("Displaying elements from Arraylist after removing elements:" + l2);
+		// System.out.println("Displaying elements from Arraylist after removing
+		// elements:" + l2);
 
 	}
 
 	private static List<String> removeDuplicate(List<String> list) {
 		List<String> l = new ArrayList<String>();
-		try {
-		
-		int length = list.size();
-		int count =0;
-		for(int i = 0; i < length; i++) {
-			if(!(l.get(count++).equals(list.get(i)))) {
+		for (int i = 0; i < list.size(); i++) {
+			boolean found = false;
+			for (int j = 0; j < l.size(); j++) {
+				if ((l.get(j).equals(list.get(i)))) {
+					found = true;	
+				}
+			}
+			if(!found) {
 				l.add(list.get(i));
 			}
+			System.out.println("******************");
 		}
-		for (String n : l) {
-			System.out.println(n);
-		}
-		
-		
-	}catch(Exception e) {
-		
-	}
 		return l;
-}}
+	}
+}
