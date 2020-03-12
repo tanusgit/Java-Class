@@ -25,6 +25,11 @@ public class DuplicateobjectsList {
 		for (String n : m) {
 			System.out.println(n);
 		}
+		System.out.println("*************************");
+		List<String> m2= removeDuplicate2(list);
+		for (String n : m2) {
+			System.out.println(n);
+		}
 
 		ArrayList l1 = new ArrayList();
 		l1.add(10);
@@ -59,5 +64,21 @@ public class DuplicateobjectsList {
 			System.out.println("******************");
 		}
 		return l;
+	}
+	
+	//removing duplicates in the same list
+	private static List<String> removeDuplicate2(List<String> list) {
+		for (int i = 0; i < list.size(); i++) {
+			boolean found = false;
+			for (int j = 1; j < list.size(); j++) {
+				if (!(list.get(j).equals(list.get(i)))) {
+					found = false;	
+				}
+			}
+			if(found) {
+				list.remove(list.get(i));
+			}
+		}
+		return list;
 	}
 }

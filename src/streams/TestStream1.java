@@ -42,7 +42,7 @@ public class TestStream1 {
 		result = numbers.stream().filter(num -> num % 2 != 0).collect(Collectors.toList());
 		System.out.println(result);
 
-		// sort the list , don't modify the list  creates a new one 
+		// sort the list , don't modify the list creates a new one
 		System.out.println("***************** Sort ************************");
 		result = numbers.stream().sorted().collect(Collectors.toList());
 		System.out.println(result);
@@ -50,11 +50,24 @@ public class TestStream1 {
 		System.out.println("***************** Reverse Sort ************************");
 		result = numbers.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
 		System.out.println(result);
-		
-		//remove duplicates and sort
+
+		// remove duplicates and sort
 		System.out.println("***************** Sort & Duplicate ************************");
 		result = numbers.stream().sorted().distinct().collect(Collectors.toList());
 		System.out.println(result);
+
+		// atleast 1 even num
+		boolean hasAnyEven = numbers.stream().anyMatch(i -> i % 2 == 0);
+		System.out.println(hasAnyEven);
+
+		// check if every num is positive
+		System.out.println("***************** allMatch   ************************");
+		boolean allPositive = numbers.stream().allMatch(i -> i > 0);
+		System.out.println(allPositive);
+
+		System.out.println("***************** hasNoMatch   ************************");
+		boolean hasNoMatch = numbers.stream().noneMatch(i -> i % 13 == 0);
+		System.out.println(hasNoMatch);
 
 	}
 }
