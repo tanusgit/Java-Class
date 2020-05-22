@@ -11,7 +11,7 @@ public class TestField {
 		int s1 = ReadAnnotationValue.getDeclaredSize("annotations.field.Person","id");
 		int s2 = ReadAnnotationValue.getDeclaredSize("annotations.field.User","pan");
 		int s3 = ReadAnnotationValue.getDeclaredSize("annotations.field.Product","productId");
-		
+		System.out.println(s1);
 		validate(p.getId(),s1);
 		validate(u.getPan(),s2);
 		validate(prod.getProductId(),s3);

@@ -12,7 +12,11 @@ public class LinkedListClass {
 		names.add("user2");
 		names.add("user9");
 		names.add("user3");
-
+		boolean res = names.contains("user1");
+		System.out.println(res);
+		String n = names.get(0);
+		System.out.println(n);
+		
 		// display names:
 		System.out.println("Entered names are::");
 
