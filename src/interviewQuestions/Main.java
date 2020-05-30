@@ -51,6 +51,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("how much you wish to deposit?");
 		input = m.nextInt();
+		if(input <= 0) {
+			System.out.println("enter a positive number");
+		}
+		
 		balance = balance + input;
 		System.out.println("your current balance is " + balance);
 	}
@@ -59,8 +63,17 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("how much you wish to withdraw?");
 		input = m.nextInt();
-		balance = balance - input;
-		System.out.println("your current balance is " + balance);
+		if(input <= 0) {
+			System.out.println("enter a positive number");
+		}
+		else if(input > balance) {
+			System.out.println("you don't have sufficient amount");
+		}
+		else {
+			balance = balance - input;
+			System.out.println("your current balance is " + balance);
+		}
+		
 
 	}
 
