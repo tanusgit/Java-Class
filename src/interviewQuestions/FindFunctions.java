@@ -17,6 +17,7 @@ package interviewQuestions;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FindFunctions {
@@ -30,16 +31,22 @@ public class FindFunctions {
 		int paren1 = '(';
 		int paren2 = ')';
 		int lineNum = 0;
+		ArrayList<String> array = new ArrayList<>();
 
 		FileInputStream fis = new FileInputStream(filename);
 		Scanner scanner = new Scanner(fis);
 		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
+			//String line = scanner.nextLine();
+			String line = scanner.next();
+			array.add(line);
 			if (line.contains("return")||line.contains("void")) {
-				System.out.println("line at: "+ line);
+				//System.out.println("line at: "+ line);
 				lineNum++;
 			}
 			//System.out.println(line);
+			for(String m : array) {
+				System.out.println(m);
+			}
 		}
 		return lineNum;
 	}
